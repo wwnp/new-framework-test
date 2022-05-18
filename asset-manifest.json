@@ -1,0 +1,14 @@
+{
+  "files": {
+    "main.css": "/new-framework-test/static/css/main.4460a8bd.css",
+    "main.js": "/new-framework-test/static/js/main.f2b5876f.js",
+    "static/media/brand.png": "/new-framework-test/static/media/brand.511ec2eaf8ad48c0d5c6.png",
+    "index.html": "/new-framework-test/index.html",
+    "main.4460a8bd.css.map": "/new-framework-test/static/css/main.4460a8bd.css.map",
+    "main.f2b5876f.js.map": "/new-framework-test/static/js/main.f2b5876f.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.4460a8bd.css",
+    "static/js/main.f2b5876f.js"
+  ]
+}
