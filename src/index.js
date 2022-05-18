@@ -11,7 +11,7 @@ import {
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
-  <BrowserRouter basename='framework-test-task'>
+  <BrowserRouter basename='new-framework-test'>
     <Routes>
       <Route index element={<App />}> </Route>
     </Routes>

@@ -1,6 +1,6 @@
 {
-  "name": "framework-test-task",
-  "homepage": "https://wwnp.github.io/framework-test-task",
+  "name": "new-framework-test",
+  "homepage": "https://wwnp.github.io/new-framework-test",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
