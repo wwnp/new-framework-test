@@ -12,29 +12,25 @@ import './style.App.css'
 const queryString = require('query-string');
 
 function App() {
-  // Parse from browser address line
   const locationUrl = useLocation()
   const locationSearch = queryString.parse(locationUrl.search)
 
-  // Massives
   const [list, setList] = useState([])
   const [preOut, setPreOut] = useState([])
   const [out, setOut] = useState([])
 
-  // Aux State
   const [theme, setTheme] = useState('dark')
   const [loading, setLoading] = useState(true)
   const [authors, setAuthors] = useState([])
   const [locations, setLocations] = useState([])
 
-  // Filters
   const [name, setName] = useState(locationSearch.name || '')
   const [author, setAuthor] = useState(locationSearch.author || SYSTEM_AUTHOR_VAR)
   const [location, setLocation] = useState(locationSearch.location || 'Location')
   const [page, setPage] = useState(parseInt(locationSearch.page || 1))
   const [from, setFrom] = useState(locationSearch.created ? locationSearch.created.split('-')[0] : '')
   const [before, setBefore] = useState(locationSearch.created ? locationSearch.created.split('-')[1] : '')
-  // Aux Vars
+
   const createdRange = useRef(null)
   const darkReverse = theme === 'dark' ? 'white' : 'dark'
   const isDarkBool = theme === 'dark' ? true : false
@@ -84,7 +80,6 @@ function App() {
     navigate(outUrl)
   }
 
-  // Fetch paintings, locations, authors, merge into one object 
   useEffect(() => {
     async function fetchPictures() {
       const list = await apiFetchUnsplash()
@@ -94,7 +89,6 @@ function App() {
     fetchPictures()
   }, [])
 
-  // For make label: Created Range
   useEffect(() => {
     if (createdRange.current) {
       replaceTitleByRef(createdRange, '.Range__title', 'Created')
